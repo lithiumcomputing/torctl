@@ -6,8 +6,8 @@ then
   exit 1
 fi
 
-mv service/* /etc/systemd/system/
-mv bash-completion/torctl /usr/share/bash-completion/completions/torctl
+cp service/* /etc/systemd/system/
+cp bash-completion/torctl /usr/share/bash-completion/completions/torctl
 
 cp torctl torctl.bak
 sed -i 's/start_service iptables//' torctl
